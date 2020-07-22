@@ -9,7 +9,7 @@
     tools:context=".QuizActivity">
 
     <TextView
-        android:id="@+id/qnumber"
+        android:id="@+id/textViewQNumber"
 
 
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
@@ -21,11 +21,11 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:id="@+id/scrollview"
-        android:layout_below="@+id/qnumber"
+        android:layout_below="@+id/textViewQNumber"
         android:layout_marginTop="0dp">
 
         <TextView
-            android:id="@+id/question"
+            android:id="@+id/textViewQuestion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/qnumber"
@@ -35,6 +35,7 @@
     </ScrollView>
 
     <RadioGroup
+        android:id="@+id/rbGroup"
         android:layout_below="@+id/scrollview"
         android:layout_marginTop="20dp"
         android:gravity="center"
@@ -72,18 +73,20 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
         <Button
+            android:id="@+id/buttonPrevious"
             android:layout_alignParentLeft="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="PREVIOUS"/>
         <Button
+            android:id="@+id/buttonExit"
             android:layout_width="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_height="wrap_content"
             android:text="EXIT"/>
         <Button
             android:layout_alignParentRight="true"
-
+            android:id="@+id/buttonNext"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NEXT"/>
