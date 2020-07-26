@@ -69,6 +69,14 @@
 
     </RadioGroup>
 
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/father_child"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
     <RelativeLayout
         android:id="@+id/bottomnav"
         android:layout_width="match_parent"

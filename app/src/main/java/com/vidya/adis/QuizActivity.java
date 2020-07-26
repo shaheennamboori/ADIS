@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -54,6 +55,8 @@ public class QuizActivity extends AppCompatActivity {
     Date dateObj;
     DateFormat dateFormat;
 
+    String docEmail,patientName;
+
 
 
     double score_A1,score_A2,score_A3,score_B1,score_B2,score_B3,score_B4;
@@ -62,6 +65,11 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+        Intent intent = getIntent();
+        docEmail = intent.getStringExtra("docemail");
+        patientName = intent.getStringExtra("patientName");
+
 
         textViewQNumber = findViewById(R.id.textViewQNumber);
         textViewQuestion = findViewById(R.id.textViewQuestion);

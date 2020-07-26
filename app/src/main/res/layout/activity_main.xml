@@ -9,30 +9,80 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <EditText
+<!--    <EditText-->
+<!--        android:id="@+id/patient_name"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:padding="20dp"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Name"/>-->
+    <com.google.android.material.textfield.TextInputLayout
+
         android:layout_margin="10dp"
-        android:padding="20dp"
-        android:inputType="textPersonName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Name"/>
-    <EditText
-        android:inputType="number"
+        android:hint="Name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/patient_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+<!--    <EditText-->
+<!--        android:id="@+id/doc_email"-->
+<!--        android:inputType="textEmailAddress"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:padding="20dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Doctors E-mail"/>-->
+
+    <com.google.android.material.textfield.TextInputLayout
+
         android:layout_margin="10dp"
-        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Doctors id"/>
-    <EditText
-        android:inputType="textPassword"
+        android:hint="Doctors E-mail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/doc_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <EditText-->
+<!--        android:inputType="textPassword"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:padding="20dp"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="Key"/>-->
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_margin="10dp"
-        android:padding="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Key"/>
+        android:hint="Key"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/startButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="START"/>
+        android:text="@string/start"/>
 </LinearLayout>

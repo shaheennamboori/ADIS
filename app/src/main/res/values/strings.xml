@@ -11,4 +11,5 @@
     <string name="next">NEXT</string>
     <string name="instructions">INSTRUCTIONS</string>
     <string name="instruction_text">* Play the obtained video and record the expressions of child\n * The video quality must be atleast HD 30fps\n *Try to include the child face completely in the video for better results\n *Visibile lighting conditions must be ensured</string>
+    <string name="start">START</string>
 </resources>

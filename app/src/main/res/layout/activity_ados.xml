@@ -8,11 +8,25 @@
     android:gravity="center"
     android:layout_height="match_parent"
     tools:context=".ADOS">
-    <com.google.android.material.textfield.TextInputEditText
-        android:layout_margin="10dp"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Request Video"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/outlinedTextField"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
-        android:hint="Email - ID"/>
+        android:layout_height="wrap_content"
+        android:hint="Your Email ID"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
     <Button
         android:id="@+id/btn_req"
         android:layout_width="wrap_content"

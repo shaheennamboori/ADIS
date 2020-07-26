@@ -9,6 +9,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.List;
 
@@ -19,6 +23,8 @@ import pub.devrel.easypermissions.EasyPermissions;
 public class MainActivity extends AppCompatActivity implements EasyPermissions.PermissionCallbacks {
 
     private Button startQuiz;
+    TextInputEditText patientName,doctorEmail;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
 
 
         startQuiz = findViewById(R.id.startButton);
+        patientName=findViewById(R.id.patient_name);
+        doctorEmail=findViewById(R.id.doc_email);
         startQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +56,8 @@ public class MainActivity extends AppCompatActivity implements EasyPermissions.P
         String[] perms = {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         if (EasyPermissions.hasPermissions(this, perms)) {
         Intent intent = new Intent(MainActivity.this,QuizActivity.class);
+        intent.putExtra("patientName",patientName.getText().toString());
+        intent.putExtra("docemail",doctorEmail.getText().toString());
         startActivity(intent);
     } else {
             // Do not have permissions, request them now
